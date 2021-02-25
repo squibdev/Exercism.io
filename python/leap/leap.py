@@ -1,13 +1,8 @@
-def is_leap_year(year):
-	pass
-	# check if year is divisible by 4
+def leap_year(year):
 	if year % 4 == 0:
-		# check if year is divisible by 100
-		if year % 100 == 0:
-			# check if year is divisible by 400
-			if year % 400 == 0:
-				return True
+		if year % 100 == 0 and year % 400 == 0:
+			return True
+		elif year % 100 == 0:
 			return False
 		return True
-	else:
-		return False
+	return False
