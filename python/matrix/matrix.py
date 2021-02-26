@@ -1,41 +1,22 @@
-class Matrix(object):
+class Matrix:
     def __init__(self, matrix_string):
-
-        self.matrix_string = matrix_string
-
-        columns = []
-
-        rows = matrix_string.split("\n")
-
-        self.rows = rows
-
-        for item in rows:
-            columns += item[0]
-
-        self.columns = columns
-
-    def row(self, index):
         rows = []
-        for i in range(len(self.rows)):
-            string_output = self.rows[i].split()
-            output = list(map(int, string_output))
-            rows.append(output)
+        columns = []
+        for row in matrix_string.split("\n"):
+            sub_r = []
+            sub_c = []
+            for item in row.split(' '):
+                print(item)
+                sub_r.append(int(item))
 
-        self.rows_output = rows
-        return rows[index-1]
+
+
+        
+    def row(self, index):
+        pass
 
     def column(self, index):
-        """rows = self.rows_output"""
-        rows = []
-        for i in range(len(self.rows)):
-            string_output = self.rows[i].split()
-            output = list(map(int, string_output))
-            rows.append(output)
+        pass
 
-        self.rows_output = rows
-        columns = []
-
-        for item in rows:
-            columns.append(item[index-1])
-
-        return columns
+m = Matrix("1 2\n3 4")
+print(m.row(0))
