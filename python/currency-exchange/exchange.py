@@ -1,3 +1,5 @@
+"""Module providing solution for Currency Exchange challenge on Exercism.io"""
+
 def exchange_money(budget, exchange_rate):
     """
 
@@ -73,5 +75,4 @@ def exchangeable_value(budget, exchange_rate, spread, denomination):
     actual_rate = calculate_spread_rate(exchange_rate, spread)
     total_value = exchange_money(budget, actual_rate)
     bill_count = get_number_of_bills(total_value, denomination)
-    
     return get_value_of_bills(denomination, bill_count)
